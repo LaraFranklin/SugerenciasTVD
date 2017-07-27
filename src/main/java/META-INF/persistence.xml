@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.TV.SugerenciasTVD.DAO.Modelos.EntidadCanal</class>
+        <class>com.TV.SugerenciasTVD.DAO.Modelos.EntidadCategoria</class>
+        <class>com.TV.SugerenciasTVD.DAO.Modelos.EntidadHistorial</class>
+        <class>com.TV.SugerenciasTVD.DAO.Modelos.EntidadPrograma</class>
+        <class>com.TV.SugerenciasTVD.DAO.Modelos.EntidadTipoprograma</class>
+        <class>com.TV.SugerenciasTVD.DAO.Modelos.EntidadUsuario</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/televison"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value=""/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
