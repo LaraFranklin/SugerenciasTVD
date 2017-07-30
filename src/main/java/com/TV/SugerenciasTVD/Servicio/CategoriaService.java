@@ -28,4 +28,9 @@ public class CategoriaService implements Categoria {
         EntidadCategoria categoria = this.repositorioCategoria.getCategoria(id_categoria);
         return (List<EntidadPrograma>) categoria.getProgramasByIdCategoria();
     }
+
+    @Override
+    public List<EntidadCategoria> getCategorias() {
+        return this.repositorioCategoria.getCategorias();
+    }
 }

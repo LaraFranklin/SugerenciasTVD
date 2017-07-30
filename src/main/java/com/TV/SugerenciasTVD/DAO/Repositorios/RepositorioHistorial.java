@@ -12,6 +12,7 @@ import java.util.List;
  */
 public interface RepositorioHistorial extends JpaRepository<EntidadHistorial, EntidadHistorialPK>{
 
-    @Query("SELECT h FROM EntidadHistorial h WHERE h.idUsuario = :id_usuario")
+    @Query("SELECT h FROM EntidadHistorial h WHERE h.idUsuario = :id_usuario order by h.like asc")
     List<EntidadHistorial> getHitorial(@Param("id_usuario") String id_usuario);
+
 }

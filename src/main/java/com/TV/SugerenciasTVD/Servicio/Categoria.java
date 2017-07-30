@@ -1,5 +1,6 @@
 package com.TV.SugerenciasTVD.Servicio;
 
+import com.TV.SugerenciasTVD.DAO.Modelos.EntidadCategoria;
 import com.TV.SugerenciasTVD.DAO.Modelos.EntidadPrograma;
 
 import java.util.List;
@@ -10,4 +11,5 @@ import java.util.List;
 public interface Categoria {
 
     List<EntidadPrograma> getSugerenciaCategoria(String id_categoria);
+    List<EntidadCategoria> getCategorias();
 }
