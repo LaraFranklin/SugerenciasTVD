@@ -20,6 +20,8 @@ public class ControladorUsuario {
 
     @GetMapping("/obtenerUsuario")
     public EntidadUsuario getUsuario(@Param("id_usuario") String id_usuario){
-        return this.usuario.getUsuario(id_usuario);
+        EntidadUsuario entidadUsuario = this.usuario.getUsuario(id_usuario);
+        entidadUsuario.setHistorialsByIdUsuario(null);
+        return entidadUsuario;
     }
 }
